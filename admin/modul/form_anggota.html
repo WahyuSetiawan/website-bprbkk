@@ -1,0 +1,91 @@
+<script language="javascript">
+    function hanyaAngka(e, decimal) {
+    var key;
+    var keychar;
+     if (window.event) {
+         key = window.event.keyCode;
+     } else
+     if (e) {
+         key = e.which;
+     } else return true;
+   
+    keychar = String.fromCharCode(key);
+    if ((key==null) || (key==0) || (key==8) ||  (key==9) || (key==13) || (key==27) ) {
+        return true;
+    } else
+    if ((("0123456789").indexOf(keychar) > -1)) {
+        return true;
+    } else
+    if (decimal && (keychar == ".")) {
+        return true;
+    } else return false;
+    }
+</script>
+<tr>
+<td>No KTP </td>        
+<td>: 
+    <input name='noktp' onkeypress="return hanyaAngka(event, false)" type='text' required>
+</td>
+
+</tr>
+<tr>
+<td>Nama</td>        
+<td>: 
+    <input name='nama' type='text'>
+</td>
+</tr>
+
+<tr>
+<td>Pinjaman</td>        
+<td>: 
+    <select name='pinjaman' type='text'>
+    <option value='Low'>Low</option>
+    <option value='Upper'>Upper</option>
+    <option value='High'>High</option>
+        </select>
+</td>
+</tr>
+
+<tr>
+<td>Penghasilan</td>        
+<td>: 
+    <select name='penghasilan' type='text'>
+	<option value='Low'>Low</option>
+    <option value='Upper'>Upper</option>
+    <option value='High'>High</option>
+    </select>
+</td>
+</tr>
+
+<tr>
+<td>Angunan</td>        
+<td>: 
+    <select name='angunan' type='text'>
+    <option value='Low'>Low</option>
+    <option value='Upper'>Upper</option>
+    <option value='High'>High</option>
+        </select>
+</td>
+</tr>
+
+<tr>
+<td>BLBI</td>        
+<td>: 
+	<select name='blbi' type='text'>
+    <option value='Termasuk'>Termasuk</option>
+    <option value='TidakTermasuk'>Tidak Termasuk</option>
+        </select>
+</td>
+</tr>
+
+
+<tr>
+<td>Syarat</td>        
+<td>: 
+	<select name='syarat' type='text'>
+    <option value='Lengkap'>Lengkap</option>
+    <option value='Kurang'>Kurang</option>
+	</select>
+</td>
+</tr>
+
